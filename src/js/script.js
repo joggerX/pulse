@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $('.carousel__inner').slick({
+        infinite: false,
         speed: 1200,
         autospeed: 2000,
         prevArrow:'<button type="button" class="slick-prev"><img src="icons/left_arrow.png"></button>',
@@ -9,6 +10,7 @@ $(document).ready(function(){
                 breakpoint: 992,
                 settings: {
                 dots: true,
+                dotsClass: 'slick-dots',
                 arrows: false
                 }
         }
@@ -35,7 +37,17 @@ $(document).ready(function(){
 
     //Modal
     $('[data-modal=consultation]').on('click',function(){
-        $('.overlay, #').fadeIn();
+        $('.overlay, #consultation').fadeIn('fast');
+    });
+    $('.modal__close').on('click', function() {
+      $('.overlay, #consultation, #thanks, #order').fadeOut('fast');      
+    });
+
+    $('.button_mini').each(function(i){
+        $(this).on('click', function(){
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('fast');
+        });
     });
 });
 

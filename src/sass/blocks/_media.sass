@@ -66,8 +66,9 @@
             display: none
 
         .slick-dots
-            padding-left: 50px
             display: flex
+            padding-left: 50px
+            text-align: center
             justify-content: center
             li
                 width: 30px
@@ -183,8 +184,9 @@
             display: none
 
         .slick-dots
-            padding-left: 50px
             display: flex
+            padding-left: 50px
+            text-align: center
             justify-content: center
             li
                 width: 30px
@@ -223,18 +225,24 @@
                 &_active
                     transform: translateX(-95%)
     .button
+        height: 40px
+        &_main
+            width: 65vw
         &_mini
             width: 100px
             height: 40px
     .feed
         padding-bottom: 30px
         &__item
+            margin: 30px 0 0
             display: flex
             flex-direction: column
             justify-content: space-between
             align-items: center
         &__text
             margin-top: 20px
+            margin-left: 32px;
+            padding-right: 30px;
         &__subtitle
             font-size: 16px
         &__descr
@@ -252,3 +260,14 @@
             font-size: 14px
         &__phone
             margin-bottom: 28px
+    
+    .modal
+        width: 300px
+        padding: 10px 10px 10px 10px
+        &__close
+            right: 5px
+            top: 10px
+    
+    .feed-form_mt25
+        width: 280px
+    
