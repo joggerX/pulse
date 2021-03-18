@@ -1,7 +1,6 @@
 $(document).ready(function(){
     $('.carousel__inner').slick({
         speed: 1200,
-        autoplay: true,
         autospeed: 2000,
         prevArrow:'<button type="button" class="slick-prev"><img src="icons/left_arrow.png"></button>',
         nextArrow:'<button type="button" class="slick-next"><img src="icons/right_arrow.png"></button>',
@@ -33,5 +32,10 @@ $(document).ready(function(){
 
     toggleSLide('.catalog-item__link');
     toggleSLide('.catalog-item__back');
+
+    //Modal
+    $('[data-modal=consultation]').on('click',function(){
+        $('.overlay, #').fadeIn();
+    });
 });
 

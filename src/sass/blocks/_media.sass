@@ -13,6 +13,9 @@
             font-size: 13px
         &__icon
             font-size: 12px
+    .header
+        &__phone
+            font-size: 16px
     .button
         &_main
             width: 250px
@@ -51,6 +54,41 @@
         form
             width: none
             margin: 0 auto
+
+    .carousel
+        padding: 50px 0
+        &__inner
+            width: 97vw
+            img
+                width: 100%
+    
+        .slick-prev, .slick-next
+            display: none
+
+        .slick-dots
+            padding-left: 50px
+            display: flex
+            justify-content: center
+            li
+                width: 30px
+                height: 30px
+                color: $main-color  
+                button
+                    display: none  
+    .catalog
+        padding-bottom: 60px
+        &__tabs 
+            width: 90vw
+            margin-left: 20px
+        &-item
+            width: 275px
+    
+    .footer
+        &__info
+            top: 385px
+            width: 400px
+            height: 220px
+            padding: 30px 48px 30px 48px
 
 @media ( max-width:575px)
     .header
@@ -133,3 +171,84 @@
     .button
         width: 100%
         height: 55px
+    
+    .carousel
+        padding: 30px 0
+        &__inner
+            width: 92vw
+            img
+                width: 100%
+        
+        .slick-prev, .slick-next
+            display: none
+
+        .slick-dots
+            padding-left: 50px
+            display: flex
+            justify-content: center
+            li
+                width: 30px
+                height: 30px
+                color: $main-color  
+                button
+                    display: none
+    .catalog
+        padding-bottom: 30px
+        &__tabs
+            width: 85vw
+            margin-top: 40px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        &__tab
+            margin-top: 15px
+            
+        &__content
+            margin-top: 30px
+            justify-content: center
+        &-item
+            width: 220px
+            padding: 10px 10px 16px 10px
+            hr
+                margin-top: 9px
+                margin-bottom: 11px
+            &__old-price
+                font-size: 13px
+            &__price
+                font-size: 16px
+            &__list
+                li 
+                    font-size: 12px
+                &_active
+                    transform: translateX(-95%)
+    .button
+        &_mini
+            width: 100px
+            height: 40px
+    .feed
+        padding-bottom: 30px
+        &__item
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+        &__text
+            margin-top: 20px
+        &__subtitle
+            font-size: 16px
+        &__descr
+            font-size: 14px
+        &__count
+            font-size: 12px
+    .footer
+        &__info
+            height: 180px
+            top: inherit
+            width: 100%
+            padding: 20px 28px 20px 28px
+        &__addr
+            margin-bottom: 26px
+            font-size: 14px
+        &__phone
+            margin-bottom: 28px
