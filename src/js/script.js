@@ -40,7 +40,7 @@ $(document).ready(function(){
         $('.overlay, #consultation').fadeIn('fast');
     });
     $('.modal__close').on('click', function() {
-      $('.overlay, #consultation, #thanks, #order').fadeOut('fast');      
+    $('.overlay, #consultation, #thanks, #order').fadeOut('fast');      
     });
 
     $('.button_mini').each(function(i){
@@ -49,5 +49,36 @@ $(document).ready(function(){
             $('.overlay, #order').fadeIn('fast');
         });
     });
+
+    function valideForms(form){
+        $(form).validate({
+            rules:{
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone:"required",
+                email:{
+                    required:true,
+                    email:true
+                }
+            },
+            messages: {
+                name: 
+                {
+                    required: "Пожалуйста, введите свое имя!",
+                    minlength: jQuery.validator.format("Имя должно быть не мене {0} символов.")
+                },
+                phone: "Пожалуйста, введите номер телефона!",
+                email: {
+                    required: "Пожалуйста, введите свою почту!",
+                    email: "Введите свою почту в формате name@example.com"
+                }
+            }
+        });
+    }
+    valideForms('#consultation-form');
+    valideForms('#consultation form');
+    valideForms('#order form');
 });
 
